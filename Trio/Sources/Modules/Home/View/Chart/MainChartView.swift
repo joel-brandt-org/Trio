@@ -136,6 +136,16 @@ extension MainChartView {
                     viewContext: context
                 )
 
+ForecastView(
+                    preprocessedData: state.preprocessedData,
+                    minForecast: state.minForecast,
+                    maxForecast: state.maxForecast,
+                    units: state.units,
+                    maxValue: state.maxYAxisValue,
+                    forecastDisplayType: state.forecastDisplayType,
+                    lastDeterminationDate: state.determinationsFromPersistence.first?.deliverAt ?? .distantPast
+                )
+
                 GlucoseChartView(
                     glucoseData: state.glucoseFromPersistence,
                     units: state.units,
