@@ -159,16 +159,9 @@ extension MainChartView {
                     fpuData: state.fpusFromPersistence,
                     minValue: units == .mgdL ? state.minYAxisValue : state.minYAxisValue
                         .asMmolL
-                )
+                
 
-                ForecastView(
-                    preprocessedData: state.preprocessedData,
-                    minForecast: state.minForecast,
-                    maxForecast: state.maxForecast,
-                    units: state.units,
-                    maxValue: state.maxYAxisValue,
-                    forecastDisplayType: state.forecastDisplayType,
-                    lastDeterminationDate: state.determinationsFromPersistence.first?.deliverAt ?? .distantPast
+    
                 )
 
                 /// show glucose value when hovering over it
